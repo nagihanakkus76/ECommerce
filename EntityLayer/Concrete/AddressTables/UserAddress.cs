@@ -15,6 +15,5 @@ namespace EntityLayer.Concrete.AddressTables
         public int QuarterID { get; set; }
         public User User { get; set; }
         public int UserID { get; set; }
-
     }
 }

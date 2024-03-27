@@ -9,6 +9,5 @@ namespace EntityLayer.Concrete
     public class BaseEntity
     {
         public int ID { get; set; }
-        
     }
 }

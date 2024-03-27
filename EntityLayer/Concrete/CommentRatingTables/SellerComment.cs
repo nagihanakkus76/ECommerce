@@ -10,6 +10,6 @@ namespace EntityLayer.Concrete.CommentRatingTables
     {
         public SellerRating SellerRating { get; set; }
         public int SellerRatingID { get; set; }
-        public string Detail { get;}
+        public string Detail { get; }
     }
 }

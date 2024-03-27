@@ -8,7 +8,6 @@ namespace EntityLayer.Concrete.ProductContainer
 {
     public class Category : BaseEntity
     {
-
         public string Name { get; set; }
         public Category ParentCategory { get; set; }
         public int ParentCategoryID { get; set; }
