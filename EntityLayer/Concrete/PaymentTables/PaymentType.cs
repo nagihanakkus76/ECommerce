@@ -9,5 +9,6 @@ namespace EntityLayer.Concrete.PaymentTables
     public class PaymentType : BaseEntity
     {
         public string Name { get; set; }
+        public  List<Payment> Payments { get; set; } = new List<Payment>();
     }
 }

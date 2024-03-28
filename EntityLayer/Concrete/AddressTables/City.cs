@@ -8,8 +8,9 @@ namespace EntityLayer.Concrete.AddressTables
 {
     public class City : BaseEntity
     {
-        public string Name { get; set; }
-        public Country Country { get; set; }
-        public int CountryID { get; set; }
+        public string? Name { get; set; }
+        public int? CountryID { get; set; }
+        public Country? Country { get; set; }
+        public List<District> Districts { get; set; } = new List<District>();
     }
 }

@@ -1,4 +1,4 @@
-﻿using EntityLayer.Concrete.ProductContainer;
+﻿using EntityLayer.Concrete.ProductTables;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,12 +9,12 @@ namespace EntityLayer.Concrete.OrderTables
 {
     public class OrderDetail : BaseEntity
     {
-        public Order Order { get; set; }
-        public int OrdeID { get; set; }
-        public Product Product { get; set; }
-        public int ProductID { get; set; }
-        public int Piece { get; set; }
-        public Decimal UnitPrice { get; set; }
-        public double DiscountAmount { get; set; }
+        public int? OrdeID { get; set; }
+        public int? ProductID { get; set; }
+        public int? Piece { get; set; }
+        public Decimal? UnitPrice { get; set; }
+        public double? DiscountAmount { get; set; }
+        public Order? Order { get; set; }
+        public Product? Product { get; set; }
     }
 }

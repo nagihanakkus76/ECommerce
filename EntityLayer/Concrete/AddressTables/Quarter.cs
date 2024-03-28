@@ -8,8 +8,9 @@ namespace EntityLayer.Concrete.AddressTables
 {
     public class Quarter : BaseEntity
     {
-        public string Name { get; set; }
-        public District District { get; set; }
-        public int DistrictID { get; set; }
+        public string? Name { get; set; }
+        public int? DistrictID { get; set; }
+        public District? District { get; set; }
+        public  List<UserAddress> UserAddresses { get; set; } = new List<UserAddress>();
     }
 }

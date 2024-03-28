@@ -9,9 +9,9 @@ namespace EntityLayer.Concrete.PaymentTables
 {
     public class PaymentOfOrder : BaseEntity
     {
-        public Payment Payment { get; set; }
-        public int PaymentID { get; set; }
-        public Order Order { get; set; }
-        public int OrderID { get; set; }
+        public int? PaymentID { get; set; }
+        public int? OrderID { get; set; }
+        public Payment? Payment { get; set; }
+        public Order? Order { get; set; }
     }
 }

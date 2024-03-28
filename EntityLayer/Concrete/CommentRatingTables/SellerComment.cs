@@ -8,8 +8,8 @@ namespace EntityLayer.Concrete.CommentRatingTables
 {
     public class SellerComment : BaseEntity
     {
-        public SellerRating SellerRating { get; set; }
-        public int SellerRatingID { get; set; }
-        public string Detail { get; }
+        public int? SellerRatingID { get; set; }
+        public string? Detail { get; }
+        public SellerRating? SellerRating { get; set; }
     }
 }

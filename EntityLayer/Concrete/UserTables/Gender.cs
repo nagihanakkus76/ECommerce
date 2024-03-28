@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EntityLayer.Concrete.UserContainer
+namespace EntityLayer.Concrete.UserTables
 {
     public class Gender : BaseEntity
     {
-        public string Name { get; set; }
+        public string? Name { get; set; }
+        public List<User> Users { get; set; } = new List<User>();
     }
 }

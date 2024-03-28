@@ -1,5 +1,5 @@
 ﻿using EntityLayer.Concrete.OrderTables;
-using EntityLayer.Concrete.UserContainer;
+using EntityLayer.Concrete.UserTables;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,12 +10,13 @@ namespace EntityLayer.Concrete.CommentRatingTables
 {
     public class SellerRating : BaseEntity
     {
-        public Order Order { get; set; }
-        public int OrderID { get; set; }
-        public User User { get; set; }
-        public int UserID { get; set; }
-        public RatingType RatingType { get; set; }
-        public int RatingTypeID { get; set; }
-        public DateTime CreatedDate { get; set; }
+        public int? OrderID { get; set; }
+        public int? UserID { get; set; }
+        public int? RatingTypeID { get; set; }
+        public DateTime? CreatedDate { get; set; }
+        public User? User { get; set; }
+        public RatingType? RatingType { get; set; }
+        public Order? Order { get; set; }
+        public List<SellerComment> SellerComments { get; set; } = new List<SellerComment>();
     }
 }
