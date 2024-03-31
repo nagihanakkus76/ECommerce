@@ -15,9 +15,9 @@ namespace EntityLayer.Concrete.CommentRatingTables
         public int? UserID { get; set; }
         public int? RatingTypeID { get; set; }
         public DateTime? CreatedDate { get; set; }
-        public Product? Product { get; set; }
-        public User? User { get; set; }
-        public RatingType? RatingType { get; set; }
-        public List<ProductComment> ProductComments { get; set; } = new List<ProductComment>();
+        public virtual Product? Product { get; set; }
+        public virtual User? User { get; set; }
+        public virtual RatingType? RatingType { get; set; }
+        public virtual ICollection<ProductComment> ProductComments { get; set; } = new List<ProductComment>();
     }
 }

@@ -20,14 +20,14 @@ namespace EntityLayer.Concrete.ProductTables
         public DateTime CreatedDate { get; set; }
         public DateTime ModifiedDate { get; set; }
         public bool Status { get; set; }
-        public List<CartDetail> CartDetails { get; set; } = new List<CartDetail>();
-        public List<CategoryOfProduct> CategoryOfProducts { get; set; } = new List<CategoryOfProduct>();
-        public List<Favorite> Favorites { get; set; } = new List<Favorite>();
-        public List<OrderDetail> OrderDetails { get; set; } = new List<OrderDetail>();
-        public List<ProductAttribute> ProductAttributes { get; set; } = new List<ProductAttribute>();
-        public List<ProductImage> ProductImages { get; set; } = new List<ProductImage>();
-        public List<ProductRating> ProductRatings { get; set; } = new List<ProductRating>();
-        public List<SellerOfProduct> ProductSellers { get; set; } = new List<SellerOfProduct>();
-        public List<ProductVideo> ProductVideos { get; set; } = new List<ProductVideo>();
+        public virtual ICollection<CartDetail> CartDetails { get; set; } = new List<CartDetail>();
+        public virtual ICollection<CategoryOfProduct> CategoryOfProducts { get; set; } = new List<CategoryOfProduct>();
+        public virtual ICollection<Favorite> Favorites { get; set; } = new List<Favorite>();
+        public virtual ICollection<OrderDetail> OrderDetails { get; set; } = new List<OrderDetail>();
+        public virtual ICollection<ProductAttribute> ProductAttributes { get; set; } = new List<ProductAttribute>();
+        public virtual ICollection<ProductImage> ProductImages { get; set; } = new List<ProductImage>();
+        public virtual ICollection<ProductRating> ProductRatings { get; set; } = new List<ProductRating>();
+        public virtual ICollection<SellerOfProduct> ProductSellers { get; set; } = new List<SellerOfProduct>();
+        public virtual ICollection<ProductVideo> ProductVideos { get; set; } = new List<ProductVideo>();
     }
 }

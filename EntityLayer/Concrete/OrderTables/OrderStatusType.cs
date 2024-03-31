@@ -9,6 +9,6 @@ namespace EntityLayer.Concrete.OrderTables
     public class OrderStatusType : BaseEntity
     {
         public string? Name { get; set; }
-        public List<Order> Orders { get; set; } = new List<Order>();
+        public virtual ICollection<Order> Orders { get; set; } = new List<Order>();
     }
 }

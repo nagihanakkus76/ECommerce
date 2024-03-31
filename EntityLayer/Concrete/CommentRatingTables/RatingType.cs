@@ -10,7 +10,7 @@ namespace EntityLayer.Concrete.CommentRatingTables
     {
         public string? DisplayText { get; set; }
         public double? Score { get; set; }
-        public  List<ProductRating> ProductRatings { get; set; } = new List<ProductRating>();
-        public List<SellerRating> SellerRatings { get; set; } = new List<SellerRating>();
+        public virtual ICollection<ProductRating> ProductRatings { get; set; } = new List<ProductRating>();
+        public virtual ICollection<SellerRating> SellerRatings { get; set; } = new List<SellerRating>();
     }
 }

@@ -15,7 +15,7 @@ namespace EntityLayer.Concrete.ShippingTables
         public DateTime? ShipmentDate { get; set;}
         public DateTime? EstimatedDeliveryDate { get; set;}
         public DateTime? DeliveryDate { get; set;}
-        public Order? Order { get; set; }
-        public ShippingCompany? ShippingCompany { get; set; }
+        public virtual Order? Order { get; set; }
+        public virtual ShippingCompany? ShippingCompany { get; set; }
     }
 }

@@ -10,6 +10,6 @@ namespace EntityLayer.Concrete.ProductTables
     {
         public string? Name { get; set; }
         public int? ParentCategoryID { get; set; }
-        public List<CategoryOfProduct> CategoryOfProducts { get; set; } = new List<CategoryOfProduct>();
+        public virtual ICollection<CategoryOfProduct> CategoryOfProducts { get; set; } = new List<CategoryOfProduct>();
     }
 }

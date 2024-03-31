@@ -9,6 +9,6 @@ namespace EntityLayer.Concrete.AddressTables
     public class Country : BaseEntity
     {
         public string? Name { get; set; }
-        public List<City> Cities { get; set; } = new List<City>();
+        public virtual ICollection<City> Cities { get; set; } = new List<City>();
     }
 }

@@ -12,6 +12,6 @@ namespace EntityLayer.Concrete.ProductTabless
         public string? Name { get; set; }
         public string? Value { get; set; }
         public int? ProductID { get; set; }
-        public Product? Product { get; set; }
+        public virtual Product? Product { get; set; }
     }
 }

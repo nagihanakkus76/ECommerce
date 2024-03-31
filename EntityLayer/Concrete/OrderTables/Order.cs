@@ -19,12 +19,12 @@ namespace EntityLayer.Concrete.OrderTables
         public int? UserID { get; set; }
         public int? UserAddressID { get; set; }
         public int? OrderStatusTypeID { get; set; }
-        public User? User { get; set; }
-        public UserAddress? UserAddress { get; set; }
-        public OrderStatusType? OrderStatusType { get; set; }
-        public List<OrderDetail> OrderDetails { get; set; } = new List<OrderDetail>();
-        public List<PaymentOfOrder> PaymentOrders { get; set; } = new List<PaymentOfOrder>();
-        public List<SellerRating> SellerRatings { get; set; } = new List<SellerRating>();
-        public List<Shipping> Shippings { get; set; } = new List<Shipping>();
+        public virtual User? User { get; set; }
+        public virtual UserAddress? UserAddress { get; set; }
+        public virtual OrderStatusType? OrderStatusType { get; set; }
+        public virtual ICollection<OrderDetail> OrderDetails { get; set; } = new List<OrderDetail>();
+        public virtual ICollection<PaymentOfOrder> PaymentOrders { get; set; } = new List<PaymentOfOrder>();
+        public virtual ICollection<SellerRating> SellerRatings { get; set; } = new List<SellerRating>();
+        public virtual ICollection<Shipping> Shippings { get; set; } = new List<Shipping>();
     }
 }

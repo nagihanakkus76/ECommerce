@@ -19,18 +19,19 @@ namespace EntityLayer.Concrete.UserTables
         public string? LastName { get; set; }
         public string? Password { get; set; }
         public string? Email { get; set; }
+        public string? PhoneNumber { get; set; }
         public DateTime? BirthDate { get; set; }
         public int? GenderID { get; set; }
         public DateTime CreatedDate { get; set; }
         public DateTime ModifiedDate { get; set; }
         public bool Status { get; set; }
-        public Gender? Gender { get; set; }
-        public List<CartDetail> CartDetails { get; set; } = new List<CartDetail>();
-        public List<Favorite> Favorites { get; set; } = new List<Favorite>();
-        public List<Order> Orders { get; set; } = new List<Order>();
-        public List<ProductRating> ProductRatings { get; set; } = new List<ProductRating>();
-        public List<SellerRating> SellerRatings { get; set; } = new List<SellerRating>();
-        public List<Seller> Sellers { get; set; } = new List<Seller>();
-        public List<UserAddress> UserAddresses { get; set; } = new List<UserAddress>();
+        public virtual Gender? Gender { get; set; }
+        public virtual ICollection<CartDetail> CartDetails { get; set; } = new List<CartDetail>();
+        public virtual ICollection<Favorite> Favorites { get; set; } = new List<Favorite>();
+        public virtual ICollection<Order> Orders { get; set; } = new List<Order>();
+        public virtual ICollection<ProductRating> ProductRatings { get; set; } = new List<ProductRating>();
+        public virtual ICollection<SellerRating> SellerRatings { get; set; } = new List<SellerRating>();
+        public virtual ICollection<Seller> Sellers { get; set; } = new List<Seller>();
+        public virtual ICollection<UserAddress> UserAddresses { get; set; } = new List<UserAddress>();
     }
 }

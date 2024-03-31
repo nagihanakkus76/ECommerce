@@ -85,5 +85,47 @@ namespace DataAccessLayer.EntityFramework
 
         public DbSet<UserAddress> UserAddresses { get; set; }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<Gender>()
+                .HasData(
+                new Gender() { ID = 1, Name = "Kadın" },
+                new Gender() { ID = 2, Name = "Erkek" });
+            modelBuilder.Entity<User>().HasData(
+                new User() {ID=1, GenderID=1, FirstName="Ayşe", LastName="Yılmaz", UserName="ayseyılmaz" },
+                new User() {ID=2, GenderID=1, FirstName="Ceyda", LastName="Yıldıl", UserName="ceydayıldız" },
+                new User() {ID=3, GenderID=2, FirstName="Ali", LastName="Güneş", UserName="aligünes" }
+                );
+
+            modelBuilder.Entity<Gender>().Property( x => x.Name).HasMaxLength(10);
+            modelBuilder.Entity<PaymentType>().Property( x => x.Name).HasMaxLength(50);
+            modelBuilder.Entity<Payment>().Property( x => x.CardNumber).HasMaxLength(20);
+            modelBuilder.Entity<Shipping>().Property( x => x.TrackingNumber).HasMaxLength(50);
+            modelBuilder.Entity<ShippingCompany>().Property( x => x.Name).HasMaxLength(50);
+            modelBuilder.Entity<OrderStatusType>().Property( x => x.Name).HasMaxLength(50);
+            modelBuilder.Entity<Quarter>().Property( x => x.Name).HasMaxLength(50);
+            modelBuilder.Entity<District>().Property( x => x.Name).HasMaxLength(50);
+            modelBuilder.Entity<City>().Property( x => x.Name).HasMaxLength(50);
+            modelBuilder.Entity<Country>().Property( x => x.Name).HasMaxLength(50);
+            modelBuilder.Entity<SellerComment>().Property( x => x.Detail).HasMaxLength(500);
+            modelBuilder.Entity<ProductComment>().Property( x => x.Detail).HasMaxLength(500);
+            modelBuilder.Entity<RatingType>().Property( x => x.DisplayText).HasMaxLength(50);
+            modelBuilder.Entity<ProductImage>().Property( x => x.Url).HasMaxLength(500);
+            modelBuilder.Entity<ProductVideo>().Property( x => x.Url).HasMaxLength(500);
+            modelBuilder.Entity<ProductAttribute>().Property( x => x.Name).HasMaxLength(50);
+            modelBuilder.Entity<ProductAttribute>().Property( x => x.Value).HasMaxLength(50);
+            modelBuilder.Entity<Category>().Property( x => x.Name).HasMaxLength(50);
+            modelBuilder.Entity<Product>().Property( x => x.Name).HasMaxLength(100);
+            modelBuilder.Entity<Seller>().Property( x => x.CompanyName).HasMaxLength(100);
+            modelBuilder.Entity<Seller>().Property( x => x.CompanyType).HasMaxLength(100);
+            modelBuilder.Entity<Seller>().Property( x => x.TaxNumber).HasMaxLength(50);
+            modelBuilder.Entity<User>().Property( x => x.UserName).HasMaxLength(50);
+            modelBuilder.Entity<User>().Property( x => x.FirstName).HasMaxLength(50);
+            modelBuilder.Entity<User>().Property( x => x.LastName).HasMaxLength(50);
+            modelBuilder.Entity<User>().Property( x => x.Password).HasMaxLength(50);
+            modelBuilder.Entity<User>().Property( x => x.Email).HasMaxLength(50);
+            modelBuilder.Entity<User>().Property( x => x.PhoneNumber).HasMaxLength(30);
+        }
     }
 }

@@ -13,7 +13,7 @@ namespace EntityLayer.Concrete.OrderTables
         public int? ProductID { get; set; }
         public int? UserID { get; set; }
         public int? Piece { get; set; }
-        public User? User { get; set; }
-        public Product? Product { get; set; }
+        public virtual User? User { get; set; }
+        public virtual Product? Product { get; set; }
     }
 }

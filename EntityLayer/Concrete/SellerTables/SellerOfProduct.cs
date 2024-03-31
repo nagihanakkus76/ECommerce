@@ -11,7 +11,7 @@ namespace EntityLayer.Concrete.SellerTables
     {
         public int? ProductID { get; set; }
         public int? SellerID { get; set; }
-        public Product? Product { get; set; }
-        public Seller? Seller { get; set; }
+        public virtual Product? Product { get; set; }
+        public virtual Seller? Seller { get; set; }
     }
 }

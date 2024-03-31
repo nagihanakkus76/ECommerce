@@ -15,8 +15,8 @@ namespace EntityLayer.Concrete.SellerTables
         public string? CompanyName { get; set; }
         public string? TaxNumber { get; set; }
         public string? CompanyType { get; set; }
-        public User? User { get; set; }
-        public UserAddress? UserAddress { get; set; }
-        public  List<SellerOfProduct> ProductSellers { get; set; } = new List<SellerOfProduct>();
+        public virtual User? User { get; set; }
+        public virtual UserAddress? UserAddress { get; set; }
+        public virtual ICollection<SellerOfProduct> ProductSellers { get; set; } = new List<SellerOfProduct>();
     }
 }

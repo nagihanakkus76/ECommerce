@@ -10,7 +10,7 @@ namespace EntityLayer.Concrete.AddressTables
     {
         public string? Name { get; set; }
         public int? CountryID { get; set; }
-        public Country? Country { get; set; }
-        public List<District> Districts { get; set; } = new List<District>();
+        public virtual Country? Country { get; set; }
+        public virtual ICollection<District> Districts { get; set; } = new List<District>();
     }
 }

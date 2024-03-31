@@ -11,7 +11,7 @@ namespace EntityLayer.Concrete.PaymentTables
         public int? PaymentTypeID { get; set; }
         public DateTime? PaymentDate { get; set; }
         public string? CardNumber { get; set; }
-        public PaymentType? PaymentType { get; set; }
-        public List<PaymentOfOrder> PaymentOrders { get; set; } = new List<PaymentOfOrder>();
+        public virtual PaymentType? PaymentType { get; set; }
+        public virtual ICollection<PaymentOfOrder> PaymentOrders { get; set; } = new List<PaymentOfOrder>();
     }
 }

@@ -11,7 +11,7 @@ namespace EntityLayer.Concrete.PaymentTables
     {
         public int? PaymentID { get; set; }
         public int? OrderID { get; set; }
-        public Payment? Payment { get; set; }
-        public Order? Order { get; set; }
+        public virtual Payment? Payment { get; set; }
+        public virtual Order? Order { get; set; }
     }
 }

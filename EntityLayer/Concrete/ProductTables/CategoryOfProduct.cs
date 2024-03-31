@@ -10,7 +10,7 @@ namespace EntityLayer.Concrete.ProductTables
     {
         public int? CategoryID { get; set; }
         public int? ProductID { get; set; }
-        public Category? Category { get; set; }
-        public Product? Product { get; set; }
+        public virtual Category? Category { get; set; }
+        public virtual Product? Product { get; set; }
     }
 }

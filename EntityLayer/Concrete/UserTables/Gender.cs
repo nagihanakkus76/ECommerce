@@ -9,6 +9,6 @@ namespace EntityLayer.Concrete.UserTables
     public class Gender : BaseEntity
     {
         public string? Name { get; set; }
-        public List<User> Users { get; set; } = new List<User>();
+        public virtual ICollection<User> Users { get; set; } = new List<User>();
     }
 }
